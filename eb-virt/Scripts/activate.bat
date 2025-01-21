@@ -8,15 +8,15 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Esat\Desktop\VS\Django_course\my_site\eb-virt
+set "VIRTUAL_ENV=C:\Users\Esat\Desktop\VS\Django_course\my_site\eb-virt"
 
 if not defined PROMPT set PROMPT=$P$G
 
 if defined _OLD_VIRTUAL_PROMPT set PROMPT=%_OLD_VIRTUAL_PROMPT%
 if defined _OLD_VIRTUAL_PYTHONHOME set PYTHONHOME=%_OLD_VIRTUAL_PYTHONHOME%
 
-set _OLD_VIRTUAL_PROMPT=%PROMPT%
-set PROMPT=(eb-virt) %PROMPT%
+set "_OLD_VIRTUAL_PROMPT=%PROMPT%"
+set "PROMPT=(eb-virt) %PROMPT%"
 
 if defined PYTHONHOME set _OLD_VIRTUAL_PYTHONHOME=%PYTHONHOME%
 set PYTHONHOME=
@@ -24,8 +24,8 @@ set PYTHONHOME=
 if defined _OLD_VIRTUAL_PATH set PATH=%_OLD_VIRTUAL_PATH%
 if not defined _OLD_VIRTUAL_PATH set _OLD_VIRTUAL_PATH=%PATH%
 
-set PATH=%VIRTUAL_ENV%\Scripts;%PATH%
-set VIRTUAL_ENV_PROMPT=(eb-virt) 
+set "PATH=%VIRTUAL_ENV%\Scripts;%PATH%"
+set "VIRTUAL_ENV_PROMPT=eb-virt"
 
 :END
 if defined _OLD_CODEPAGE (

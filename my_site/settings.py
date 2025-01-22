@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-mk_epci^_6l727j72os@6za*+pky)i_1-l(65kq1(97&r9hz=6
 DEBUG = getenv("IS_DEVELOPMENT", True)
 
 ALLOWED_HOSTS = [
-    getenv("APP_HOST")
+    getenv("APP_HOST", "127.0.0.1")
 ]
 
 
@@ -81,8 +81,13 @@ WSGI_APPLICATION = "my_site.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "djangoblog",
+        "PASSWORD": "testertester",
+        "HOST": "django-blog.cvaic8g4ubp1.us-west-2.rds.amazonaws.com",
+        "PORT": "5432"
+        # HOST and PORT were for test, it's not available now. You can create another postgresql database in AWS RDS and test.
     }
 }
 
